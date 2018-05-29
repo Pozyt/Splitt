@@ -18,6 +18,9 @@
 
 .form__field-wrapper {
   margin-top: 0.9em;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form__icon {
@@ -29,6 +32,7 @@ height: auto;
 .form__label {
   margin-bottom: 0.9em;
   display: none;
+  font-size:13px;
 }
 
 .form__input {
@@ -49,7 +53,9 @@ height: auto;
 }
 
 .form__field {
-
+display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .form__field + .form__field {
@@ -73,6 +79,7 @@ height: auto;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: calc(3 * .9em);
 }
 
 @media (min-width: 600px) {
@@ -89,6 +96,7 @@ height: auto;
     margin-top: 0.9em;
     display: flex;
     text-align: center;
+    width: 100%;
 
 
   }
@@ -119,6 +127,7 @@ height: auto;
     width: 30px;
     height: auto;
     display: block;
+    margin-right: 20px;
   }
 
   .form__action {
@@ -127,7 +136,8 @@ height: auto;
   }
 
   .form__actions {
-    
+    flex-direction:row;
+    justify-content:space-between;
   }
 }
 
