@@ -13,7 +13,7 @@ class BillsController < ApplicationController
 		def create
 		
 			if Bill.create(bill_params)
-				redicrect_to actiom: :index
+				redirect_to actiom: :index
 			else
 				render :new
 			end
@@ -22,6 +22,10 @@ class BillsController < ApplicationController
 		def show
 			@bill = Bill.find(params[:id])
 
+		end
+
+		def home
+			@bill = Bill.last
 		end
 
 		def bill_params
